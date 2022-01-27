@@ -10,10 +10,10 @@ type: "java web app"
 
 ## List of web services fuzzed as part of this fuzz target.
 web_services:
-  - "customerreference"
+  - "change_this"
 
 ## Base URL of the application under test.
-base_url: "http://192.168.122.163:8080/"
+base_url: "http://127.0.0.1:8080/"
 
 ## Protocol used to communicate with the software under test. Valid values are "http" and "grpc".
 protocol: http
