@@ -1,13 +1,10 @@
-# Work in progress
-
-
 # Out of process fuzzing
 
-This is a preliminary document on how to use the out of process fuzzer without using the local installation with VS Code extension
+This is a document on how to use the out of process fuzzer without using the CI Fuzz local installation
 
 ## Repository setup
 
-Create an online Git repository and modify the following files:
+Create an online Git repository based on this one and modify the following files:
 
 ### .code-intelligence/web_services.yaml
 
