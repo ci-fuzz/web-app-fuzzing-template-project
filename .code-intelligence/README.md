@@ -74,7 +74,7 @@ If you have started your application, you can start the fuzz test from CI Fuzz w
 ## Working with seeds
 
 For the out of process fuzzer to reach any meaningful code coverage good seeds should be provided.
-When creating a fuzz target seeds are automatically generated using the OpenAPI spec or Spring endpoint
+When running a fuzz target seeds are automatically generated using the OpenAPI spec or Spring endpoint
 analysis. In some cases these automatically generated seeds will require some user modification.
 
 The automatic seeds can only be found on the CI Fuzz server's file system, in the directory  `/root/.local/share/code-intelligence/<project_dir>/corpora` and the format
