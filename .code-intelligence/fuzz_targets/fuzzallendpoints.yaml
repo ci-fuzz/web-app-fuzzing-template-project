@@ -10,7 +10,7 @@ type: "java web app"
 
 ## List of web services fuzzed as part of this fuzz target.
 web_services:
-  - "change_this"
+  - "mywebservice"
 
 ## Base URL of the application under test.
 base_url: "http://127.0.0.1:8080/"

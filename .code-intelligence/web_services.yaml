@@ -10,7 +10,7 @@
 ## be referenced in a fuzz test of type "web_app".
 web_services:
   ## Name to identify the web service.
-  - name: change_this
+  - name: mywebservice
     ## Relative path to an OpenAPI / swagger spec that is used by the fuzzer
     ## to generate HTTP requests. OpenAPI version 2 and 3 in json and yaml format
     ## is supported.
