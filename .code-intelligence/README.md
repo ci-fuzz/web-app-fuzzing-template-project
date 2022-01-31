@@ -1,6 +1,14 @@
-# Out of process fuzzing
+# Web App fuzzing
 
-This is a document on how to use the out of process fuzzer without using the CI Fuzz local installation
+This is a document on how to use the Web App fuzzer without using the CI Fuzz local installation
+
+## Prerequisites
+
+This repository contains a template and documentation to set up fuzzing for your own Web App/Web API. You need to have your own CI Fuzz server installed. In the near future, an account in CI Fuzz SaaS platform will also be supported.
+
+This template will work with few modifications for Java HTTP APIs (this use case is also described in this readme).
+
+ With some modifications, it can also be used to fuzz Java GRPC APIs and Go APIs (both HTTP and GRPC).
 
 ## Repository setup
 
