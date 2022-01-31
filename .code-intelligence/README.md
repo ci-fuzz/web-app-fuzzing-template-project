@@ -56,6 +56,12 @@ At this point, everything listed in the prerequisites section of that page is co
 
 Run your application with the Java agent and correct options, or set up your CICD script to run it.
 
+The java agent command you are using will in most cases look like this:
+
+java -javaagent:$HOME/bin/fuzzing_agent.jar=fuzzing_server_host=my_fuzzing_server.com,api_token=NzM4NDgxOTZAZ2l0aHViOjlmNGE4ODkwZDE5MGFhYjVhY2I1YzFlMjEzNTgxYmFlYmUwNmIwYjk0YzM4OTZjMTU2NDg2ZDE0MGQ5ODI3M2Q,instrumentation_includes="org.some_package.**",service_name=projects/my_project/web_services/my_web_service_name -jar my_application.jar
+
+Full list of java agent options can be found [here](https://help.code-intelligence.com/set-java-agent-options).
+  
 When running, your application's output should say that it is instrumenting Java classes and that it is connecting to the CI Fuzz server:
 
 INFO: Got status 'OK' from fuzzing server
