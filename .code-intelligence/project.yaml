@@ -14,11 +14,11 @@
 ## directories (/lib, /bin/, /usr, ...) from the host system are
 ## automatically mounted into the container, effectively creating a
 ## build environment from the host.
-#build_container: ubuntu:20.04
+build_container: cifuzz/builders:maven
 
 ## The name of the container image used for running the fuzz tests. If
 ## unspecified, the image of the build container is used.
-#run_container: ubuntu:20.04
+run_container: cifuzz/builders:maven
 
 ## A list of paths which should be mounted from the host into the
 ## build and run containers. The format is SOURCE-DIR:DEST-DIR, where
