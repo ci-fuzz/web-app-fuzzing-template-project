@@ -11,7 +11,8 @@
 web_services:
   ## Name to identify the web service.
   - name: mywebservice
-    ## Relative path to an OpenAPI / swagger spec that is used by the fuzzer
+    ## Relative (to the root directory of your repository)
+    ## path to an OpenAPI / swagger spec that is used by the fuzzer
     ## to generate HTTP requests. OpenAPI version 2 and 3 in json and yaml format
     ## is supported.
     ##
