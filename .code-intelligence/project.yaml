@@ -18,7 +18,7 @@ build_container: cifuzz/builders:maven
 
 ## The name of the container image used for running the fuzz tests. If
 ## unspecified, the image of the build container is used.
-run_container: cifuzz/builders:maven
+run_container: cifuzz/java:latest
 
 ## A list of paths which should be mounted from the host into the
 ## build and run containers. The format is SOURCE-DIR:DEST-DIR, where
