@@ -66,8 +66,9 @@ Run your application with the Java agent and correct options, or set up your CIC
 
 The java agent command you are using will in most cases look like this:
 
-java -javaagent:$PWD/fuzzing_agent.jar=fuzzing_server_host=my_fuzzing_server.com,api_token=NzM4NDgxOTZAZ2l0aHViOjlmNGE4ODkwZDE5MGFhYjVhY2I1YzFlMjEzNTgxYmFlYmUwNmIwYjk0YzM4OTZjMTU2NDg2ZDE0MGQ5ODI3M2Q,instrumentation_includes="org.some_package.**",service_name=projects/my_project/web_services/mywebservice -jar my_application.jar
-
+```
+  java -javaagent:$PWD/fuzzing_agent.jar=fuzzing_server_host=my_fuzzing_server.com,api_token=NzM4NDgxOTZAZ2l0aHViOjlmNGE4ODkwZDE5MGFhYjVhY2I1YzFlMjEzNTgxYmFlYmUwNmIwYjk0YzM4OTZjMTU2NDg2ZDE0MGQ5ODI3M2Q,instrumentation_includes="org.some_package.**",service_name=projects/my_project/web_services/mywebservice -jar my_application.jar
+```
 Make sure that the names of web services match the entries in web_services.yaml and fuzzallendpoints.yaml. If you did not change those, use the default name: mywebservice. If you give the java agent aa different service_name, the fuzz test will not work correctly!
 
 Full list of java agent options can be found [here](https://help.code-intelligence.com/set-java-agent-options).
