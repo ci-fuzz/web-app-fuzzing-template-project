@@ -18,13 +18,13 @@ Copy the .code-intelligence directory to the root of the Git repository where th
 
 If your application consists of several microservices, add one web service entry for each microservice and name them appropriately. Otherwise, the default name can be used.
 
-If your application does not have web controllers written in the Springboot framework, or if you already configured fuzzing but you have problems with the endpoint analysis step when starting fuzzing, add a file with OpenAPI specifications. The path is relative to the root directory of this git repository.
+If your application does not have web controllers written in the Springboot framework, or if you already configured fuzzing but you have problems with the endpoint analysis step when starting fuzzing, add a file with OpenAPI specifications. The path is relative to the root directory of your git repository.
 
 ### .code-intelligence/fuzz_targets/fuzzallendpoints.yaml
 
 Modify base_url to the URL where your application under test will be accessible, if it is predictable and will be always the same. Otherwise, leave the default.
 
-Make sure that network traffic from the CI Fuzz server to the application is allowed on the port where the application is running.
+Make sure that network traffic from the CI Fuzz server to the application is allowed on the port where the application will be running.
 
 If you changed or added web service name(s) in the previous file, change/add them here to match.
 
@@ -36,7 +36,7 @@ Use one or more of the files here to add the steps needed to authenticate to you
 
 For the initial fuzzing setup, you can keep this empty, as it is.
 
-This is further explained later on in this Readme.
+This is further explained later.
 
 ## Configure project in CI Fuzz Web Interface
 
