@@ -1,6 +1,6 @@
-# Web App fuzzing
+# Web Fuzzing
 
-This is a document on how to use the Web App fuzzer without using the CI Fuzz local installation
+This is a document on how to use the Web fuzzer without using the CI Fuzz local installation, using only the CI Fuzz server
 
 ## Prerequisites
 
@@ -22,7 +22,9 @@ If your application does not have web controllers written in the Springboot fram
 
 ### .code-intelligence/fuzz_targets/fuzzallendpoints.yaml
 
-Modify base_url to the URL where your application under test will be accessible, if it will be always the same. Make sure that network traffic from the CI Fuzz server to the application is allowed on the port where the application is running.
+Modify base_url to the URL where your application under test will be accessible, if it is predictable and will be always the same. Otherwise, leave the default.
+
+Make sure that network traffic from the CI Fuzz server to the application is allowed on the port where the application is running.
 
 If you changed or added web service name(s) in the previous file, change/add them here to match.
 
@@ -49,11 +51,13 @@ CICD script is documented [here](https://help.code-intelligence.com/continuous-f
 
 Make sure that the name of the web service in every app/service started with a java agent match the entries in web_services.yaml and fuzzallendpoints.yaml. If you did not change those, use the default name: mywebservice. If you give the java agent aa different service_name, the fuzz test will not work correctly!
 
+Setup is now complete and you can run your pipeline.
+
 When running, your application's output should say that it is instrumenting Java classes and that it is connecting to the CI Fuzz server:
 
 INFO: Got status 'OK' from fuzzing server
 
-In your CI Fuzz web interface, in the Web Services view, your web service should be green.
+In your CI Fuzz web interface, in the Web Services view, your web service should be green when it is running, but fuzzing has not started yet. It is OK if it shows red during fuzzing.
 
 ## Working with seeds
 
